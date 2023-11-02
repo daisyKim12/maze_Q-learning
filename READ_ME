@@ -1,0 +1,34 @@
+# Q-Learning for Maze Traversal
+The program's primary objective is to implement the Q-Learning algorithm to solve the maze traversal problem. The existing codebase for this task is provided through the GitHub repository https://github.com/jostbr/pymaze. The program is written in Python.
+
+## Overview
+1. Implement the Q-Learning algorithm by adding a new function to the existing codebase. The function should be named q_learning and should take as input a maze object, the number of episodes, the learning rate (α), the discount factor (γ), and the exploration rate (ε).
+2. Create a function named q_learning_path that takes as input a maze object and a learned Q-table, and returns the found path from the starting position to the goal position, along with its cost.
+3. Train the Q-Learning algorithm on 3 randomly generated 20x20 mazes. You should use the visualization functions already provided in the codebase to create a visual representation of each maze and the found paths.
+4. Implement the Q-Learning-based maze traversal algorithm for the randomly generated 20x20 mazes using the following outline:
+	- Initialize the Q-Table with zeros and set values of parameters by yourself. 
+	- Set the initial state (the starting position of the agent).
+	- Choose an action based on the current state and the Q-Table, using the ε-greedy strategy.
+	- Perform the action and observe the reward and the next state. e. Update the Q-Table using the Q-Learning update rule.
+	- Set the next state as the current state.
+	- Repeat steps c-f until the agent reaches the goal or a predefined maximum number of iterations is reached.
+	- Visualize
+5. Choose at least two parameters and change values of them to see the impact of the parameters. (e.g., test the performance when (α=0.2, α=0.4, α=0.6, α=0.8) and (γ =0.2, γ =0.4, γ =0.6, γ =0.8)).
+
+## file discription
+- main.py: main python file so in this file task is running. There are total 3 task in this project. And in main.py the task can be checked. In order to check the result just enter the following code in the terminal 
+- my_q_learning.py: this file contains two main function
+	1. def q_learning(self, maze, episodes, alpha, gamma, epsilon, invalid_reward, show):
+	2. def q_learning_path(self, maze, q_table):
+- visualize.py: this file contains function to visualize q-table
+
+## Result
+
+**q-table**   
+![](x/Screenshot%202023-11-03%20at%2012.32.55%20AM.png)
+
+**Solition Path**   
+![](x/Screenshot%202023-11-03%20at%2012.34.27%20AM.png)
+
+**Performance graph by Gamma and Alpha parameter**   
+![](x/Screenshot%202023-11-03%20at%2012.35.39%20AM.png)
